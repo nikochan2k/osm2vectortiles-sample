@@ -1,0 +1,16 @@
+{
+  "name": "vector_map_example",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yoshihiro Seki",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mbtiles": "^0.9.0",
+    "tilelive": "^5.12.2"
+  }
+}
