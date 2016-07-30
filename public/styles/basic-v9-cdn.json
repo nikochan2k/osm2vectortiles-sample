@@ -3,12 +3,12 @@
     "name": "Basic",
     "sources": {
         "mapbox": {
-            "url": "https://osm2vectortiles.tileserver.com/v2.json",
+            "url": "../v2.json",
             "type": "vector"
         }
     },
-    "sprite": "https://raw.githubusercontent.com/osm2vectortiles/mapbox-gl-styles/master/sprites/basic-v9",
-    "glyphs": "https://raw.githubusercontent.com/osm2vectortiles/mapbox-gl-styles/master/glyphs/{fontstack}/{range}.pbf",
+    "sprite": "../sprites/basic-v9",
+    "glyphs": "../glyphs/{fontstack}/{range}.pbf",
     "metadata": {
         "mapbox:autocomposite": true,
         "mapbox:type": "template"

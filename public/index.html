@@ -25,6 +25,12 @@
             top: 10px;
             left: 10px;
         }
+
+        #test {
+            position: absolute;
+            top: 30px;
+            left: 10px;
+        }
     </style>
 </head>
 
@@ -32,24 +38,31 @@
 
     <div id='map'></div>
     <select id='dropdown'></select>
+    <button id="test">test</button>
     <script>
         var map = new mapboxgl.Map({
             container: 'map', // container id
-            style: 'styles/basic-v9-cdn.json', //stylesheet location
+            style: 'styles/bright-v9-cdn.json', //stylesheet location
             center: [135, 35], // starting position
             zoom: 10, // starting zoom
             hash: true
         });
         map.addControl(new mapboxgl.Navigation());
+        map.addControl(new mapboxgl.Geolocate({
+            position: 'bottom-right'
+        }));
 
         // Everything bellow is just for switching the styles
 
         var select = document.getElementById("dropdown");
         select.setAttribute('onchange', 'swapStyle()');
 
+        var test = document.getElementById("test");
+        test.setAttribute('onclick', 'addPoint()');
+
         var styles = [
-            'basic-v9-cdn',
-            'bright-v9-cdn'
+            'bright-v9-cdn',
+            'basic-v9-cdn'
         ];
 
         for (var i in styles) {
@@ -65,6 +78,22 @@
                 if (err) throw err;
                 map.setStyle(style);
             });
+        }
+
+        function addPoint() {
+            var sourceObj = new mapboxgl.GeoJSONSource({
+                data: {
+                    "type": "FeatureCollection",
+                    "features": [{
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [135, 35]
+                        }
+                    }]
+                }
+            });
+            map.addSource('some id', sourceObj); // add
         }
     </script>
 

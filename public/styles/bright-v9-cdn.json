@@ -3,12 +3,12 @@
     "name": "Bright",
     "sources": {
         "mapbox": {
-            "url": "https://osm2vectortiles.tileserver.com/v2.json",
+            "url": "../v2.json",
             "type": "vector"
         }
     },
-    "sprite": "https://raw.githubusercontent.com/osm2vectortiles/mapbox-gl-styles/master/sprites/bright-v9",
-    "glyphs": "https://raw.githubusercontent.com/osm2vectortiles/mapbox-gl-styles/master/glyphs/{fontstack}/{range}.pbf",
+    "sprite": "../sprites/bright-v9",
+    "glyphs": "../glyphs/{fontstack}/{range}.pbf",
     "metadata": {
         "mapbox:autocomposite": true,
         "mapbox:type": "template",
@@ -322,37 +322,6 @@
                 "mapbox:group": "1444849382550.77"
             },
             "interactive": true
-        },
-        {
-            "id": "water_offset",
-            "paint": {
-                "fill-color": "white",
-                "fill-opacity": 0.3,
-                "fill-translate": [
-                    0,
-                    2.5
-                ]
-            },
-            "metadata": {
-                "mapbox:group": "1444849382550.77"
-            },
-            "interactive": true,
-            "ref": "water"
-        },
-        {
-            "id": "water_pattern",
-            "paint": {
-                "fill-translate": [
-                    0,
-                    2.5
-                ],
-                "fill-pattern": "wave"
-            },
-            "metadata": {
-                "mapbox:group": "1444849382550.77"
-            },
-            "interactive": true,
-            "ref": "water"
         },
         {
             "interactive": true,
