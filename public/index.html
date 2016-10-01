@@ -89,11 +89,23 @@
                         "geometry": {
                             "type": "Point",
                             "coordinates": [135, 35]
+                        },
+                        "properties": {
+                            "icon": "toilet",
+                            "marker-color": "#004358"
                         }
                     }]
                 }
             });
-            map.addSource('some id', sourceObj); // add
+            map.addSource('akashi', sourceObj);
+            map.addLayer({
+                "id": "akashi",
+                "type": "symbol",
+                "source": "akashi",
+                "layout": {
+                    "icon-image": "{icon}-15"
+                }
+            });
         }
     </script>
 
